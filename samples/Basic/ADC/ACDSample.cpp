@@ -3,5 +3,5 @@
 using namespace codal;
 
 void ADCSample_main(){
-    codal::STM32PNUCLEO_WB55RG PNUCLEO_WB55RG;
+    codal::STM32NUCLEO_F411RE NUCLEO_F411RE;
 }

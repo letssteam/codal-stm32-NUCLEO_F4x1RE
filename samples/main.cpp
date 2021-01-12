@@ -1,4 +1,4 @@
-#include "STM32PNUCLEO_WB55RG.h"
+#include "STM32NUCLEO_F411RE.h"
 
 #if defined(GPIO_SAMPLE)
 #include "GPIOSample.h"

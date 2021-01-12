@@ -1,5 +1,5 @@
 {
-    "device":"PNUCLEO_WB55RG",
+    "device":"NUCLEO_F411RE",
     "processor":"STM32L4",
     "architecture":"CORTEX_M4",
     "toolchain":"ARM_GCC",
@@ -32,7 +32,7 @@
         "SET_L2CAP_CONN_UPD_REQ_COMMAND" : 1,
         "DENABLE_SPI_FIX" : 1
     },
-    "definitions":"-DSTM32L4 -DSTM32L4xx -DSTM32L475xx -DDMESG_SERIAL_DEBUG -include codal-stm32-PNUCLEO_WB55RG/inc/localconf.h",
+    "definitions":"-DSTM32L4 -DSTM32L4xx -DSTM32L475xx -DDMESG_SERIAL_DEBUG -include codal-stm32-NUCLEO_F411RE/inc/localconf.h",
     "cmake_definitions":{
     },
     "cpu_opts":"-mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16",

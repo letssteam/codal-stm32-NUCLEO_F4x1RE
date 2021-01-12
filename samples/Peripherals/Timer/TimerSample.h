@@ -1,4 +1,4 @@
-#include "STM32PNUCLEO_WB55RG.h"
+#include "STM32NUCLEO_F411RE.h"
 
 #ifndef TIMER_SAMPLE_H
 #define TIMER_SAMPLE_H

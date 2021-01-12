@@ -1,6 +1,6 @@
-# Codal target for the PNUCLEO_WB55RG Board
+# Codal target for the NUCLEO_F411RE Board
 
-Codal target for the [P-NUCLEO-WB55](https://www.st.com/en/evaluation-tools/p-nucleo-wb55.html). Codal is the core set of drivers, mechanisms and types that make up the runtime for a board in Makecode.
+Codal target for the [NUCLEO_F411RE](https://www.st.com/en/evaluation-tools/nucleo-f411re.html). Codal is the core set of drivers, mechanisms and types that make up the runtime for a board in Makecode.
 
 ## Overview
 
@@ -8,17 +8,17 @@ The codal runtime provides an easy to use environment for programming the board 
 
 In addition to supporting development in C/C++, the runtime is also designed specifically to support higher level languages provided by our partners that target physical computing and computer science education. It is currently used as a support library for Microsoft MakeCode
 
-Codal-core must be implemented by third party developper to support new hardware target. This repository constain the codal implementation for the [B-L475E-IOT01A](http://www.st.com/en/evaluation-tools/b-l475e-iot01a.html) Discovery kit for IoT node.
+Codal-core must be implemented by third party developper to support new hardware target.
 
 ## Board Information  
 
-The the [P-NUCLEO-WB55](https://www.st.com/en/evaluation-tools/p-nucleo-wb55.html) allows users to develop applications of BLE 5 device.
+The the [NUCLEO_F411RE](https://www.st.com/en/evaluation-tools/nucleo-f411re.html) allows users to develop applications for embedded device.
 
-The P-NUCLEO-WB55 pack is a multi-protocol wireless and ultra-low-power device embedding a powerful and ultra-low-power radio compliant with the Bluetooth® Low Energy (BLE) SIG specification v5.0 and with IEEE 802.15.4-2011.
+The STM32 Nucleo-64 board provides an affordable and flexible way for users to try out new concepts and build prototypes by choosing from the various combinations of performance and power consumption features, provided by the STM32 microcontroller. For the compatible boards, the external SMPS significantly reduces power consumption in Run mode.
 
 The support for Arduino Uno V3 connectivity provides unlimited expansion capabilities with a large choice of specialized add-on boards.
 
-<img src="https://www.st.com/bin/ecommerce/api/image.PF265562.en.feature-description-include-personalized-no-cpn-large.jpg" width="600px" />
+<img src="https://www.st.com/bin/ecommerce/api/image.PF260320.en.feature-description-include-personalized-no-cpn-large.jpg" width="600px" />
 
 ## Feature List (and if implemented in codal)
 
@@ -49,8 +49,8 @@ Codal is also a build system to simplify as much as possible the experience of n
   ```json
   {
     "target": {
-        "name": "codal-stm32-PNUCLEO_WB55RG", 
-        "url": "https://github.com/letssteam/codal-stm32-PNUCLEO_WB55RG", 
+        "name": "codal-stm32-NUCLEO_F411RE", 
+        "url": "https://github.com/letssteam/codal-stm32-NUCLEO_F411RE", 
         "branch": "master", 
         "type": "git", 
         "test_ignore": true
@@ -58,7 +58,7 @@ Codal is also a build system to simplify as much as possible the experience of n
   }
   ```
 - In the root of this repository type `python build.py` the `-c` option cleans before building.
-- The bin file `PNUCLEO_WB55RG.bin` will be placed at the location specified by `codal.json`, by default this is the root.
+- The bin file `NUCLEO_F411RE.bin` will be placed at the location specified by `codal.json`, by default this is the root.
 - To test the sample program, you just copy the bin file in the mass storage of the board.
 
 ### Advanced use
@@ -68,8 +68,8 @@ If you would like to override or define any additional configuration options (`#
 ```json
 {
     "target": {
-        "name": "codal-stm32-PNUCLEO_WB55RG", 
-        "url": "https://github.com/letssteam/codal-stm32-PNUCLEO_WB55RG", 
+        "name": "codal-stm32-NUCLEO_F411RE", 
+        "url": "https://github.com/letssteam/codal-stm32-NUCLEO_F411RE", 
         "branch": "master", 
         "type": "git", 
         "test_ignore": true
@@ -93,8 +93,8 @@ For example, if you want to test the `BLE_TEMPERATURE_ALARM_SAMPLE`, you need to
 ```json
 {
     "target": {
-        "name": "codal-stm32-PNUCLEO_WB55RG", 
-        "url": "https://github.com/letssteam/codal-stm32-PNUCLEO_WB55RG", 
+        "name": "codal-stm32-NUCLEO_F411RE", 
+        "url": "https://github.com/letssteam/codal-stm32-NUCLEO_F411RE", 
         "branch": "master", 
         "type": "git", 
         "test_ignore": true
