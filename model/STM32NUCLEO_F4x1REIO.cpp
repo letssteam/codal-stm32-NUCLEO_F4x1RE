@@ -25,7 +25,7 @@ DEALINGS IN THE SOFTWARE.
   * Represents a collection of all I/O pins on the device.
   */
 
-#include "STM32NUCLEO_F411REIO.h"
+#include "STM32NUCLEO_F4x1REIO.h"
 
 namespace codal
 {
@@ -38,7 +38,7 @@ namespace codal
   * Accepts a sequence of unique ID's used to distinguish events raised
   * by Pin instances on the default EventModel.
   */
-STM32NUCLEO_F411REIO::STM32NUCLEO_F411REIO() :
+STM32NUCLEO_F4x1REIO::STM32NUCLEO_F4x1REIO() :
     A0 (ID_PIN_P0, PinNumber::A0, PIN_CAPABILITY_AD),
     A1 (ID_PIN_P1, PinNumber::A1, PIN_CAPABILITY_AD),
     A2 (ID_PIN_P2, PinNumber::A2, PIN_CAPABILITY_AD),

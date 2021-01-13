@@ -1,4 +1,4 @@
-#include "STM32NUCLEO_F411RE.h"
+#include "STM32NUCLEO_F4x1RE.h"
 
 #if defined(GPIO_SAMPLE)
 #include "GPIOSample.h"

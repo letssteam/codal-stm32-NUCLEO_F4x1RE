@@ -1,6 +1,6 @@
 {
-    "device":"NUCLEO_F411RE",
-    "processor":"STM32L4",
+    "device":"NUCLEO_F4x1RE",
+    "processor":"STM32F4",
     "architecture":"CORTEX_M4",
     "toolchain":"ARM_GCC",
     "post_process":"",
@@ -27,15 +27,12 @@
         "DEVICE_USB":0,
         "CODAL_TIMESTAMP":"uint32_t",
         "PROCESSOR_WORD_TYPE":"uint32_t",
-        "BLUENRG_MS" : 1,
-        "USE_STM32L475E_IOT01" : 1,
-        "SET_L2CAP_CONN_UPD_REQ_COMMAND" : 1,
         "DENABLE_SPI_FIX" : 1
     },
-    "definitions":"-DSTM32L4 -DSTM32L4xx -DSTM32L475xx -DDMESG_SERIAL_DEBUG -include codal-stm32-NUCLEO_F411RE/inc/localconf.h",
+    "definitions":"-DSTM32F4 -DSTM32F4xx -DSTM32F411xE -DDMESG_SERIAL_DEBUG -include codal-stm32-NUCLEO_F4x1RE/inc/localconf.h",
     "cmake_definitions":{
     },
-    "cpu_opts":"-mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16",
+    "cpu_opts":"-mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard",
     "asm_flags":"-fno-exceptions -fno-unwind-tables",
     "c_flags":"-std=gnu11 -D__weak=\"__attribute__((weak))\" -D__packed=\"__attribute__((__packed__))\" -DSTM32L475xx -fwrapv -Warray-bounds -ffunction-sections -fdata-sections -g -fstack-usage -Wall -fno-inline",
     "cpp_flags":"-std=c++11 -Wno-register -D__weak=\"__attribute__((weak))\" -D__packed=\"__attribute__((__packed__))\" -fwrapv -fno-rtti -fno-threadsafe-statics -fno-exceptions -fno-unwind-tables -Wl,--gc-sections -Wl,--sort-common -Wl,--sort-section=alignment -Wno-array-bounds -DSTM32L475xx -g -fstack-usage -Wall -fno-inline",

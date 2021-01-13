@@ -11,21 +11,21 @@ void onSampleEvent(Event e){
 
 
 void GPIOSample_main(){
-    codal::STM32NUCLEO_F411RE NUCLEO_F411RE;
+    codal::STM32NUCLEO_F4x1RE NUCLEO_F4x1RE;
     printf("\n");
     printf("*******************************************\n");
     printf("*           Demonstration de I/O          *\n");
     printf("*******************************************\n");
-    //NUCLEO_F411RE.io.A1.setAnalogValue(512);
-    NUCLEO_F411RE.sleep(1000);
+    //NUCLEO_F4x1RE.io.A1.setAnalogValue(512);
+    NUCLEO_F4x1RE.sleep(1000);
     system_timer_event_every(1000, ID_PIN_P0, SENSOR_UPDATE_NEEDED);
     EventModel::defaultEventBus->listen(ID_PIN_P0, SENSOR_UPDATE_NEEDED, onSampleEvent);
 
     while(1) {
-        NUCLEO_F411RE.io.led1.setDigitalValue(1);
-        NUCLEO_F411RE.sleep(1000);
+        NUCLEO_F4x1RE.io.led1.setDigitalValue(1);
+        NUCLEO_F4x1RE.sleep(1000);
 
-        NUCLEO_F411RE.io.led1.setDigitalValue(0);
-        NUCLEO_F411RE.sleep(1000);
+        NUCLEO_F4x1RE.io.led1.setDigitalValue(0);
+        NUCLEO_F4x1RE.sleep(1000);
     }
 }

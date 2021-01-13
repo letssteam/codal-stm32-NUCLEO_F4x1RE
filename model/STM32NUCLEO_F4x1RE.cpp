@@ -1,10 +1,10 @@
-#include "STM32NUCLEO_F411RE.h"
+#include "STM32NUCLEO_F4x1RE.h"
 
 using namespace codal;
 
-void STM32NUCLEO_F411RE_dmesg_flush();
+void STM32NUCLEO_F4x1RE_dmesg_flush();
 
-STM32NUCLEO_F411RE *codal::default_device_instance = nullptr;
+STM32NUCLEO_F4x1RE *codal::default_device_instance = nullptr;
 
 
 /**
@@ -13,7 +13,7 @@ STM32NUCLEO_F411RE *codal::default_device_instance = nullptr;
   * Create a representation of a device, which includes member variables
   * that represent various device drivers used to control aspects of the STM32 IOT node.
   */
-STM32NUCLEO_F411RE::STM32NUCLEO_F411RE()
+STM32NUCLEO_F4x1RE::STM32NUCLEO_F4x1RE()
   : CodalComponent(),
     lowLevelTimer(TIM_MST, TIM_MST_IRQ),
     timer(lowLevelTimer),
@@ -36,20 +36,20 @@ STM32NUCLEO_F411RE::STM32NUCLEO_F411RE()
   * static context i.e. in a constructor.
   *
   * @code
-  * stm32NUCLEO_F411RE.init();
+  * stm32NUCLEO_F4x1RE.init();
   * @endcode
   *
   * @note This method must be called before user code utilises any functionality
-  *       contained within the STM32NUCLEO_F411RE class.
+  *       contained within the STM32NUCLEO_F4x1RE class.
   */
-int STM32NUCLEO_F411RE::init()
+int STM32NUCLEO_F4x1RE::init()
 {
     if (status & DEVICE_INITIALIZED)
         return DEVICE_NOT_SUPPORTED;
 
     status |= DEVICE_INITIALIZED;
 
-    //codal_dmesg_set_flush_fn(STM32NUCLEO_F411RE_dmesg_flush);    
+    //codal_dmesg_set_flush_fn(STM32NUCLEO_F4x1RE_dmesg_flush);    
     
     // Bring up fiber scheduler.
     scheduler_init(messageBus);
@@ -68,7 +68,7 @@ int STM32NUCLEO_F411RE::init()
 
 WEAK int __io_putchar(int ch);
 
-void STM32NUCLEO_F411RE_dmesg_flush()
+void STM32NUCLEO_F4x1RE_dmesg_flush()
 {
 #if CONFIG_ENABLED(DMESG_SERIAL_DEBUG)
 #if DEVICE_DMESG_BUFFER_SIZE > 0

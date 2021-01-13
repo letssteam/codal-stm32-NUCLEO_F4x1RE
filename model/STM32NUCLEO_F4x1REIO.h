@@ -59,13 +59,13 @@ namespace codal
     /**
      * Represents a collection of all I/O pins exposed by the device.
      */
-    class STM32NUCLEO_F411REIO
+    class STM32NUCLEO_F4x1REIO
     {
         public:
             /**
              * Constructor.
              */
-            STM32NUCLEO_F411REIO();
+            STM32NUCLEO_F4x1REIO();
 
             STM32Pin        A0;
             STM32Pin        A1;

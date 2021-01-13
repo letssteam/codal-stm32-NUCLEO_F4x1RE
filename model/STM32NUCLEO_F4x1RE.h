@@ -14,7 +14,7 @@
 
 #include "Button.h"
 #include "STM32LowLevelTimer.h"
-#include "STM32NUCLEO_F411REIO.h"
+#include "STM32NUCLEO_F4x1REIO.h"
 
 
 
@@ -29,21 +29,21 @@
  */
 namespace codal
 {
-    class STM32NUCLEO_F411RE : public CodalComponent
+    class STM32NUCLEO_F4x1RE : public CodalComponent
     {
         public:
             STM32LowLevelTimer lowLevelTimer;
             Timer timer;
             MessageBus     messageBus;
 
-            STM32NUCLEO_F411REIO io;
+            STM32NUCLEO_F4x1REIO io;
 
             //Button buttonUSER;
             
             /**
              * Constructor.
              */
-            STM32NUCLEO_F411RE();
+            STM32NUCLEO_F4x1RE();
 
             /**
              * Post constructor initialisation method.
@@ -95,6 +95,6 @@ namespace codal
             }
     };
 
-    extern STM32NUCLEO_F411RE *default_device_instance;
+    extern STM32NUCLEO_F4x1RE *default_device_instance;
 }
 #endif

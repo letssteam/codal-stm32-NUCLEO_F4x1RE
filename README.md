@@ -1,6 +1,6 @@
-# Codal target for the NUCLEO_F411RE Board
+# Codal target for the NUCLEO_F4x1RE Board
 
-Codal target for the [NUCLEO_F411RE](https://www.st.com/en/evaluation-tools/nucleo-f411re.html). Codal is the core set of drivers, mechanisms and types that make up the runtime for a board in Makecode.
+Codal target for the [NUCLEO_F4x1RE](https://www.st.com/en/evaluation-tools/nucleo-f411re.html). Codal is the core set of drivers, mechanisms and types that make up the runtime for a board in Makecode.
 
 ## Overview
 
@@ -12,7 +12,7 @@ Codal-core must be implemented by third party developper to support new hardware
 
 ## Board Information  
 
-The the [NUCLEO_F411RE](https://www.st.com/en/evaluation-tools/nucleo-f411re.html) allows users to develop applications for embedded device.
+The the [NUCLEO_F4x1RE](https://www.st.com/en/evaluation-tools/nucleo-f411re.html) allows users to develop applications for embedded device.
 
 The STM32 Nucleo-64 board provides an affordable and flexible way for users to try out new concepts and build prototypes by choosing from the various combinations of performance and power consumption features, provided by the STM32 microcontroller. For the compatible boards, the external SMPS significantly reduces power consumption in Run mode.
 
@@ -49,8 +49,8 @@ Codal is also a build system to simplify as much as possible the experience of n
   ```json
   {
     "target": {
-        "name": "codal-stm32-NUCLEO_F411RE", 
-        "url": "https://github.com/letssteam/codal-stm32-NUCLEO_F411RE", 
+        "name": "codal-stm32-NUCLEO_F4x1RE", 
+        "url": "https://github.com/letssteam/codal-stm32-NUCLEO_F4x1RE", 
         "branch": "master", 
         "type": "git", 
         "test_ignore": true
@@ -58,7 +58,7 @@ Codal is also a build system to simplify as much as possible the experience of n
   }
   ```
 - In the root of this repository type `python build.py` the `-c` option cleans before building.
-- The bin file `NUCLEO_F411RE.bin` will be placed at the location specified by `codal.json`, by default this is the root.
+- The bin file `NUCLEO_F4x1RE.bin` will be placed at the location specified by `codal.json`, by default this is the root.
 - To test the sample program, you just copy the bin file in the mass storage of the board.
 
 ### Advanced use
@@ -68,8 +68,8 @@ If you would like to override or define any additional configuration options (`#
 ```json
 {
     "target": {
-        "name": "codal-stm32-NUCLEO_F411RE", 
-        "url": "https://github.com/letssteam/codal-stm32-NUCLEO_F411RE", 
+        "name": "codal-stm32-NUCLEO_F4x1RE", 
+        "url": "https://github.com/letssteam/codal-stm32-NUCLEO_F4x1RE", 
         "branch": "master", 
         "type": "git", 
         "test_ignore": true
@@ -93,8 +93,8 @@ For example, if you want to test the `BLE_TEMPERATURE_ALARM_SAMPLE`, you need to
 ```json
 {
     "target": {
-        "name": "codal-stm32-NUCLEO_F411RE", 
-        "url": "https://github.com/letssteam/codal-stm32-NUCLEO_F411RE", 
+        "name": "codal-stm32-NUCLEO_F4x1RE", 
+        "url": "https://github.com/letssteam/codal-stm32-NUCLEO_F4x1RE", 
         "branch": "master", 
         "type": "git", 
         "test_ignore": true
