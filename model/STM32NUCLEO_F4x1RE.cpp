@@ -15,7 +15,7 @@ STM32NUCLEO_F4x1RE *codal::default_device_instance = nullptr;
   */
 STM32NUCLEO_F4x1RE::STM32NUCLEO_F4x1RE()
   : CodalComponent(),
-    lowLevelTimer(TIM_MST, TIM_MST_IRQ),
+    lowLevelTimer(TIM5, TIM5_IRQn),
     timer(lowLevelTimer),
     messageBus(),
     io()
