@@ -26,7 +26,7 @@
         "CODAL_DEBUG":"CODAL_DEBUG_ENABLED",
         "DEVICE_USB":0,
         "CODAL_TIMESTAMP":"uint32_t",
-        "PROCESSOR_WORD_TYPE":"uint32_t",
+        "PROCESSOR_WORD_TYPE":"uintptr_t",
         "DENABLE_SPI_FIX" : 1
     },
     "definitions":"-DSTM32F4 -DSTM32F4xx -DSTM32F411xE -DDMESG_SERIAL_DEBUG -include codal-stm32-NUCLEO_F4x1RE/inc/localconf.h",
@@ -34,20 +34,20 @@
     },
     "cpu_opts":"-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard",
     "asm_flags":"-fno-exceptions -fno-unwind-tables",
-    "c_flags":"-std=c18 -fwrapv -Warray-bounds",
-    "cpp_flags":"-std=c++2a -fwrapv -fno-rtti -fno-threadsafe-statics -fno-exceptions -fno-unwind-tables -Wl,--gc-sections -Wl,--sort-common -Wl,--sort-section=alignment -Warray-bounds -Wno-register -Wno-volatile",
+    "c_flags":"-std=c18 -u _printf_float  -fwrapv -Warray-bounds -Wno-format",
+    "cpp_flags":"-std=c++2a -u _printf_float  -fwrapv -fno-rtti -fno-threadsafe-statics -fno-exceptions -fno-unwind-tables -Wl,--gc-sections -Wl,--sort-common -Wl,--sort-section=alignment -Warray-bounds -Wno-register -Wno-format",
     "linker_flags":"-Wl,--no-wchar-size-warning -Wl,--gc-sections -Wl,--defsym=LD_FLASH_OFFSET=0 -Wl,--defsym=LD_MAX_SIZE=524288 -Wl,--defsym=LD_MAX_DATA_SIZE=98304 -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16",
     "libraries":[
         {
             "name":"codal-core",
             "url":"https://github.com/letssteam/codal-core",
-            "branch":"master",
+            "branch":"main",
             "type":"git"
         },
         {
             "name":"codal-stm32",
             "url":"https://github.com/letssteam/codal-stm32",
-            "branch":"master",
+            "branch":"main",
             "type":"git"
         }
     ]
