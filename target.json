@@ -29,7 +29,7 @@
         "PROCESSOR_WORD_TYPE":"uintptr_t",
         "DENABLE_SPI_FIX" : 1
     },
-    "definitions":"-DSTM32F4 -DSTM32F4xx -DSTM32F411xE -DDMESG_SERIAL_DEBUG -include codal-stm32-NUCLEO_F4x1RE/inc/localconf.h",
+    "definitions":"-DSTM32F4 -DSTM32F4xx -DSTM32F411xE -DHAL_UART_MODULE_ENABLED -DDMESG_SERIAL_DEBUG -include codal-stm32-NUCLEO_F4x1RE/inc/localconf.h",
     "cmake_definitions":{
     },
     "cpu_opts":"-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard",
