@@ -26,8 +26,7 @@
         "CODAL_DEBUG":"CODAL_DEBUG_ENABLED",
         "DEVICE_USB":0,
         "CODAL_TIMESTAMP":"uint32_t",
-        "PROCESSOR_WORD_TYPE":"uintptr_t",
-        "DENABLE_SPI_FIX" : 1
+        "PROCESSOR_WORD_TYPE":"uintptr_t"
     },
     "definitions":"-DSTM32F4 -DSTM32F4xx -DSTM32F411xE -DHAL_UART_MODULE_ENABLED -DDMESG_SERIAL_DEBUG -include codal-stm32-NUCLEO_F4x1RE/inc/localconf.h",
     "cmake_definitions":{
