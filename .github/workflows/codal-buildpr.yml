@@ -15,7 +15,33 @@ jobs:
         with:
           repository: letssteam/codal-letssteam
           path: codal
-      - name: codal build
+
+      - name: checkout codal-core
+        uses: actions/checkout@v2
+        with:
+          repository: letssteam/codal-core
+          path: codal/libraries/codal-core
+
+      - name: checkout codal-stm32
+        uses: actions/checkout@v2
+        with:
+          repository: letssteam/codal-stm32
+          path: codal/libraries/codal-stm32
+
+      - name: checkout PR
+        uses: actions/checkout@v2
+        with:
+          path: codal/libraries/codal-stm32-NUCLEO_F4x1RE
+      - name: create codal.json
+        run: echo '{ \
+              "target": { \
+              "name": "codal-stm32-NUCLEO_F4x1RE", "url": "https://github.com/letssteam/codal-stm32-NUCLEO_F4x1RE", \
+              "branch": "main", \
+              "type": "git", \
+              "dev": true \
+            }}' > codal/codal.json
+      
+      - name: build PR
         run: |
           cd codal
-          ./build.py -d codal-stm32-DISCO_L475VG_IOT
+          ./build.py -c
