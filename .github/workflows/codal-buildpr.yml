@@ -32,24 +32,22 @@ jobs:
       - name: checkout PR
         uses: actions/checkout@v2
         with:
-          path: codal/libraries/${REPO_NAME}
-        env:
-          REPO_NAME: ${{ github.repository.name }}
+          path: codal/libraries/${{ github.repository.name }}
 
       - name: create codal.json
         run: |
           echo \
             '{
               "target": {
-              "name": "${REPO_NAME}", 
-              "url": "${REPO_URL}",
+              "name": "${{ github.repository.name }}", 
+              "url": "${{ github.repository.clone_url }}",
               "branch": "main",
               "type": "git",
               "dev": true
             }}' > codal/codal.json
-        env:
-          REPO_NAME: ${{ github.repository.name }}
-          REPO_URL: ${{ github.repository.clone_url }}
+          cat codal/codal.json
+          ls codal/libraries
+
       - name: build PR
         run: |
           cd codal
