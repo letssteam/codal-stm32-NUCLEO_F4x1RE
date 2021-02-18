@@ -27,6 +27,7 @@ jobs:
         with:
           repository: letssteam/codal-stm32
           path: codal/libraries/codal-stm32
+          submodules: recursive
 
       - name: checkout PR
         uses: actions/checkout@v2
