@@ -48,6 +48,7 @@ jobs:
               \"type\": \"git\",
               \"dev\": true
             }}" > codal/codal.json
+            cat codal/codal.json
             ls -l codal/libraries
         env:
           REPO_NAME: ${{ github.event.repository.name }}
