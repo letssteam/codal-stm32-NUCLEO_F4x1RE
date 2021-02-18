@@ -32,25 +32,25 @@ jobs:
       - name: checkout PR
         uses: actions/checkout@v2
         with:
-          path: codal/libraries/codal-stm32-NUCLEO_F4x1RE
+          path: codal/libraries/${REPO_NAME}
+        env:
+          REPO_NAME: ${{ github.repository.name }}
+
       - name: create codal.json
         run: |
           echo \
             '{
               "target": {
-              "name": "codal-stm32-NUCLEO_F4x1RE", 
-              "url": "https://github.com/letssteam/codal-stm32-NUCLEO_F4x1RE",
+              "name": "${REPO_NAME}", 
+              "url": "${REPO_URL}",
               "branch": "main",
               "type": "git",
               "dev": true
             }}' > codal/codal.json
-      
+        env:
+          REPO_NAME: ${{ github.repository.name }}
+          REPO_URL: ${{ github.repository.clone_url }}
       - name: build PR
         run: |
           cd codal
           ./build.py -c
-      - name: Dump github context
-        run:   echo "$GITHUB_CONTEXT"
-        shell: bash
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
