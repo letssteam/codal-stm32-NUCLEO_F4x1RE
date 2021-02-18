@@ -43,15 +43,13 @@ jobs:
           echo \
             "{
               \"target\": {
-              "name": \"$REPO_NAME\", 
+              \"name\": \"$REPO_NAME\", 
               \"url\": \"$REPO_URL\",
               \"branch\": \"main\",
               \"type\": \"git\",
               \"dev\": true
               }
             }" > codal/codal.json
-            cat codal/codal.json
-            ls -lR codal/libraries
       - name: build PR
         run: |
           cd codal
