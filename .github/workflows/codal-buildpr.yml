@@ -48,9 +48,10 @@ jobs:
               \"branch\": \"main\",
               \"type\": \"git\",
               \"dev\": true
-            }}" > codal/codal.json
+              }
+            }" > codal/codal.json
             cat codal/codal.json
-            ls -l codal/libraries
+            ls -lR codal/libraries
       - name: build PR
         run: |
           cd codal
