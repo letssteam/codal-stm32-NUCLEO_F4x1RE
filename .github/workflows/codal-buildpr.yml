@@ -33,12 +33,15 @@ jobs:
         with:
           path: codal/libraries/codal-stm32-NUCLEO_F4x1RE
       - name: create codal.json
-        run: echo '{ \
-              "target": { \
-              "name": "codal-stm32-NUCLEO_F4x1RE", "url": "https://github.com/letssteam/codal-stm32-NUCLEO_F4x1RE", \
-              "branch": "main", \
-              "type": "git", \
-              "dev": true \
+        run: |
+          echo \
+            '{
+              "target": {
+              "name": "codal-stm32-NUCLEO_F4x1RE", 
+              "url": "https://github.com/letssteam/codal-stm32-NUCLEO_F4x1RE",
+              "branch": "main",
+              "type": "git",
+              "dev": true
             }}' > codal/codal.json
       
       - name: build PR
