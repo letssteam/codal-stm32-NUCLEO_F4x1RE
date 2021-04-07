@@ -4,9 +4,8 @@
             "includePath": [
                 "/usr/lib/arm-none-eabi/include/**",
                 "${workspaceFolder}/inc/**",
-                "${workspaceFolder}/src/**",
                 "${workspaceFolder}/model/**",
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/samples/**"
             ],
             "name": "Codal",
             "defines": [
