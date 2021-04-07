@@ -5,6 +5,7 @@
             "defines": [
                 "STM32F4",
                 "STM32F4xx",
+                "STM32F411xE",
                 "DMESG_SERIAL_DEBUG",
                 "USE_HAL_DRIVER",
                 "DEVICE_SRAM_BASE=0x20000000",
