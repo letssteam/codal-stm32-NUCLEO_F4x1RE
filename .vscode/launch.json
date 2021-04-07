@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/NUCLEO_F4x1RE",
+            "name": "Debug (OpenOCD)",
+            "device": "STM32L475VGTx",
+            "svdFile": "${workspaceFolder}/libraries/codal-stm32-NUCLEO_F4x1RE/scripts/STM32F411.svd",
+            "searchDir": [
+                "/usr/share/openocd/scripts/",
+                "${workspaceFolder}/libraries/codal-stm32-NUCLEO_F4x1RE/scripts/"
+            ],
+            "configFiles": [
+                "openocd.cfg"
+            ],
+            "preLaunchTask": "flash",
+            "runToMain": true,
+            "preLaunchCommands": [
+                "set mem inaccessible-by-default off",
+                "enable breakpoint",
+                "monitor reset"
+            ]
+        }
+    ]
+}
