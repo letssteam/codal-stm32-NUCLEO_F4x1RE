@@ -1,7 +1,14 @@
 {
-    "device": "NUCLEO_F4x1RE",
-    "processor": "STM32F4",
+    "device": "STM32",
+    "board":"NUCLEO_F411RE",
+
     "architecture": "CORTEX_M4",
+    "mcu":"cortex-m4",
+
+    "processor": "STM32F4",
+    "series":"STM32F4xx",
+    "product_line":"STM32F411xE",
+    "variant":"STM32F4xx/F411R(C-E)T",
     "toolchain": "ARM_GCC",
     "post_process": "",
     "generate_bin": true,
@@ -27,7 +34,10 @@
         "DEVICE_USB": 0,
         "CODAL_TIMESTAMP": "uint32_t",
         "PROCESSOR_WORD_TYPE": "uintptr_t",
-        "BOARD_NAME": "\"NUCLEO_F4x1RE\""
+        "BOARD_NAME": "\"NUCLEO_F4x1RE\"",
+        "PERIPHERAL_PINS": "PeripheralPins",
+        "VARIANT" : "variant_NUCLEO_F411RE",
+        "VARIANT_H":"\"variant_NUCLEO_F411RE.h\""  
     },
     "definitions": "-DSTM32F4 -DSTM32F4xx -DSTM32F411xE -DHAL_UART_MODULE_ENABLED -DDMESG_SERIAL_DEBUG -include codal-stm32-NUCLEO_F4x1RE/inc/localconf.h -DUSBCON -DUSBD_USE_CDC -DHAL_PCD_MODULE_ENABLED -DUSBD_CLASS_BOS_ENABLED=1",
     "cmake_definitions": {},
