@@ -1,6 +1,7 @@
 {
     "architecture": "CORTEX_M4",
     "asm_flags": "-fno-exceptions -fno-unwind-tables",
+    "board": "NUCLEO_F411RE",
     "c_flags": "-std=c11 -u _printf_float  -fwrapv -Warray-bounds -Wno-format",
     "cmake_definitions": {},
     "config": {
@@ -22,14 +23,17 @@
         "DMESG_SERIAL_DEBUG": 1,
         "EVENT_LISTENER_DEFAULT_FLAGS": "MESSAGE_BUS_LISTENER_DROP_IF_BUSY",
         "MESSAGE_BUS_LISTENER_MAX_QUEUE_DEPTH": 10,
+        "PERIPHERAL_PINS": "PeripheralPins",
         "PROCESSOR_WORD_TYPE": "uintptr_t",
         "SCHEDULER_TICK_PERIOD_US": 4000,
-        "USE_ACCEL_LSB": 0
+        "USE_ACCEL_LSB": 0,
+        "VARIANT": "variant_NUCLEO_F411RE",
+        "VARIANT_H": "\"variant_NUCLEO_F411RE.h\""
     },
     "cpp_flags": "-std=c++17 -u _printf_float  -fwrapv -fno-rtti -fno-threadsafe-statics -fno-exceptions -fno-unwind-tables -Wl,--gc-sections -Wl,--sort-common -Wl,--sort-section=alignment -Warray-bounds -Wno-register -Wno-volatile -Wno-format",
     "cpu_opts": "-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard",
     "definitions": "-DSTM32F4 -DSTM32F4xx -DSTM32F411xE -DHAL_UART_MODULE_ENABLED -DDMESG_SERIAL_DEBUG -include codal-stm32-NUCLEO_F4x1RE/inc/localconf.h -DUSBCON -DUSBD_USE_CDC -DHAL_PCD_MODULE_ENABLED -DUSBD_CLASS_BOS_ENABLED=1",
-    "device": "NUCLEO_F4x1RE",
+    "device": "STM32",
     "generate_bin": true,
     "generate_hex": true,
     "libraries": [
@@ -40,15 +44,19 @@
             "url": "https://github.com/letssteam/codal-core"
         },
         {
-            "branch": "a44c94d918213396f852d5e037ea6f4819f31b9c",
+            "branch": "ec3308669acc0ad7ccbcb7b301fbb565f34afe96",
             "name": "codal-stm32",
             "type": "git",
             "url": "https://github.com/letssteam/codal-stm32"
         }
     ],
     "linker_flags": "-Wl,--no-wchar-size-warning -Wl,--gc-sections -Wl,--defsym=LD_FLASH_OFFSET=0 -Wl,--defsym=LD_MAX_SIZE=524288 -Wl,--defsym=LD_MAX_DATA_SIZE=98304 -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16",
+    "mcu": "cortex-m4",
     "post_process": "",
     "processor": "STM32F4",
-    "snapshot_version": "v0.0.17",
-    "toolchain": "ARM_GCC"
+    "product_line": "STM32F411xE",
+    "series": "STM32F4xx",
+    "snapshot_version": "v0.0.18",
+    "toolchain": "ARM_GCC",
+    "variant": "STM32F4xx/F411R(C-E)T"
 }
