@@ -56,7 +56,7 @@
     "processor": "STM32F4",
     "product_line": "STM32F411xE",
     "series": "STM32F4xx",
-    "snapshot_version": "v0.1.2",
+    "snapshot_version": "v0.1.3",
     "toolchain": "ARM_GCC",
     "variant": "STM32F4xx/F411R(C-E)T"
 }
