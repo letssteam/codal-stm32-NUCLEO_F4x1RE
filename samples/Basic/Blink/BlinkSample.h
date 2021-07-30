@@ -7,6 +7,6 @@
 #define SAMPLE_MAIN BlinkSample_main
 #endif
 
-void BlinkSample_main();
+void BlinkSample_main(codal::STM32NUCLEO_F4x1RE& nucleoBoard);
 
 #endif

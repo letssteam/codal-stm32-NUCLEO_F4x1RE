@@ -14,9 +14,12 @@
 #include "BlinkSample.h"
 #endif
 
-using namespace codal;
+codal::STM32NUCLEO_F4x1RE nucleoBoard;
 
-int main() {
-    SAMPLE_MAIN();
-    release_fiber();
+auto main() -> int
+{
+    nucleoBoard.init();
+    SAMPLE_MAIN(nucleoBoard);
+    codal::release_fiber();
+    return 0;
 }
