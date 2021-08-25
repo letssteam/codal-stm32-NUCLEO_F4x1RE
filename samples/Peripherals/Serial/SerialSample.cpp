@@ -14,11 +14,11 @@ void SerialSample_main()
     NUCLEO_F4x1RE.sleep(1000);
 
     while (true) {
-        NUCLEO_F4x1RE.io.led1.setDigitalValue(1);
+        NUCLEO_F4x1RE.io.led.setDigitalValue(1);
 
         printf("\nVALUE = %d.%d degC\n", 0, 0);
 
-        NUCLEO_F4x1RE.io.led1.setDigitalValue(0);
+        NUCLEO_F4x1RE.io.led.setDigitalValue(0);
         NUCLEO_F4x1RE.sleep(1000);
     }
 }

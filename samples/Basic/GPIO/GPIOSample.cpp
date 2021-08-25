@@ -26,10 +26,10 @@ void GPIOSample_main()
     EventModel::defaultEventBus->listen(ID_PIN_P0, SENSOR_UPDATE_NEEDED, onSampleEvent);
 
     while (true) {
-        NUCLEO_F4x1RE.io.led1.setDigitalValue(1);
+        NUCLEO_F4x1RE.io.led.setDigitalValue(1);
         NUCLEO_F4x1RE.sleep(1000);
 
-        NUCLEO_F4x1RE.io.led1.setDigitalValue(0);
+        NUCLEO_F4x1RE.io.led.setDigitalValue(0);
         NUCLEO_F4x1RE.sleep(1000);
     }
 }
