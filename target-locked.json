@@ -33,7 +33,6 @@
         "USBCON": 1,
         "USBD_CLASS_BOS_ENABLED": 1,
         "USBD_USE_CDC": 1,
-        "USB_MAX_PKT_SIZE": 64,
         "USE_ACCEL_LSB": 0,
         "VARIANT": "variant_NUCLEO_F411RE",
         "VARIANT_H": "\"variant_NUCLEO_F411RE.h\""
@@ -64,7 +63,7 @@
     "processor": "STM32F4",
     "product_line": "STM32F411xE",
     "series": "STM32F4xx",
-    "snapshot_version": "v1.0.2",
+    "snapshot_version": "v1.0.3",
     "toolchain": "ARM_GCC",
     "variant": "STM32F4xx/F411R(C-E)T"
 }
