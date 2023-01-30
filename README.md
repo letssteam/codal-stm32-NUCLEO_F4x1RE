@@ -1,4 +1,5 @@
-# Codal target for the NUCLEO_F4x1RE Board [![codal-stm32-NUCLEO_F4x1RE](https://img.shields.io/github/workflow/status/letssteam/codal-stm32-NUCLEO_F4x1RE/codal-buildtarget?label=codal-stm32-NUCLEO_F4x1RE)](https://github.com/letssteam/codal-stm32-NUCLEO_F4x1RE/actions)
+# Codal target for the NUCLEO_F4x1RE Board  [![codal-stm32-NUCLEO_F4x1RE](https://github.com/letssteam/codal-stm32-NUCLEO_F4x1RE/actions/workflows/codal-buildtarget.yml/badge.svg)](https://github.com/letssteam/codal-stm32-NUCLEO_F4x1RE/actions)
+
 
 Codal target for the [NUCLEO_F4x1RE](https://www.st.com/en/evaluation-tools/nucleo-f411re.html). Codal is the core set of drivers, mechanisms and types that make up the runtime for a board in Makecode.
 
